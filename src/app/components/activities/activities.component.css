@@ -1,0 +1,16 @@
+/* activities.component.css - Styling for Activities Component */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+}

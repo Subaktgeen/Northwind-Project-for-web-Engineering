@@ -1,0 +1,19 @@
+<!-- app.component.html - Main view to display and manage activities -->
+<div class="container">
+  <h1>Fitness Tracker</h1>
+
+  <div>
+    <input [(ngModel)]="newActivity.activity" placeholder="Activity" />
+    <div *ngIf="isNameError" style="color: red;">Error in Activity</div>
+    <input [(ngModel)]="newActivity.duration" type="number" placeholder="Duration (mins)" />
+    <div *ngIf="isNumError" style="color: red;">Error in Mins</div>
+    <button (click)="addActivity()">Add Activity</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let activity of activities">
+      {{ activity.activity }} - {{ activity.duration }} mins
+      <button class="delete" (click)="deleteActivity(activity.id)">Delete</button>
+    </li>
+  </ul>
+</div>
